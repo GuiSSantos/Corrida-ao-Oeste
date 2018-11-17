@@ -29,3 +29,4 @@ void Projetil::Desenha(RenderWindow&window){
 Collider Projetil::GetCollider(){
     return Collider (bala);
 }
+

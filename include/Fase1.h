@@ -15,7 +15,7 @@
 #include<string>
 #include<sstream>
 #include<vector>
-
+#include"Jogador2.h"
 
 class Fase1
 {
@@ -23,6 +23,7 @@ class Fase1
         Fase1();
         virtual ~Fase1();
         void Executar(RenderWindow& window,float deltaTime,Jogador& jogador1,View& view);
+        void Executar2(RenderWindow& window,float deltaTime, Jogador2& jogador2);
 
     protected:
 

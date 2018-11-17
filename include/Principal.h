@@ -13,6 +13,7 @@
 #include<string>
 #include<sstream>
 #include<vector>
+#include"Jogador2.h"
 
 using namespace sf;
 
