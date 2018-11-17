@@ -1,16 +1,16 @@
-#ifndef PROJETIL_H
-#define PROJETIL_H
+#ifndef PROJETIL2_H
+#define PROJETIL2_H
 #include<SFML/Graphics.hpp>
 #include "jogador.h"
 #include"Collider.h"
 #include "Jogador2.h"
 
 
-class Projetil
+class Projetil2
 {
     public:
-        Projetil(Texture* texture, Vector2f size, Vector2f posicao, Jogador jogador);
-        virtual ~Projetil();
+        Projetil2(Texture* texture, Vector2f size, Vector2f posicao, Jogador2 jogador);
+        virtual ~Projetil2();
         void Atualiza();
         void Desenha(RenderWindow&window);
         Collider GetCollider();
@@ -22,4 +22,4 @@ class Projetil
 
 };
 
-#endif // PROJETIL_H
+#endif // PROJETIL2_H

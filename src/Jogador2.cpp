@@ -46,7 +46,7 @@ void Jogador2::OnColisao(Vector2f direction){
     atira=false;
     counter+=1.f;
 
-     if(Keyboard::isKeyPressed(Keyboard::Up)&&canJump)
+    if(Keyboard::isKeyPressed(Keyboard::Up)&&canJump)
     {
         canJump=false;
         vel.y=-sqrtf(2.f*981.f*jumpHeight);
@@ -64,7 +64,7 @@ void Jogador2::OnColisao(Vector2f direction){
         vel.x += velocidade;
     }
 
-     if(Keyboard::isKeyPressed(Keyboard::P))
+     if(Keyboard::isKeyPressed(Keyboard::L))
     {
         if(counter>1000){
             atira=true;

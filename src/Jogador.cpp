@@ -64,7 +64,7 @@ void Jogador::OnColisao(Vector2f direction){
         vel.x += velocidade;
     }
 
-     if(Keyboard::isKeyPressed(Keyboard::Space))
+    if(Keyboard::isKeyPressed(Keyboard::Space))
     {
         if(counter>1000){
             atira=true;

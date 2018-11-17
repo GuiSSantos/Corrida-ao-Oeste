@@ -8,6 +8,7 @@
 #include"BolaFeno.h"
 #include"jogador.h"
 #include "Projetil.h"
+#include "Projetil2.h"
 #include"Plataforma.h"
 #include"Apache.h"
 #include "JJ.h"
@@ -23,14 +24,16 @@ class Fase1
         Fase1();
         virtual ~Fase1();
         void Executar(RenderWindow& window,float deltaTime,Jogador& jogador1,View& view);
-        void Executar2(RenderWindow& window,float deltaTime, Jogador2& jogador2);
+        void Executar2(RenderWindow& window,float deltaTime, Jogador& jogador, View view, Jogador2& jogador2 );
+        void Atualiza(float deltaTime);
+        void Atualiza2(float deltaTime);
 
     protected:
 
     private:
         Texture bar, bala22, background,jj,chao,bola,cacto,tnt,bala1;
         Font fonte;
-        Text vidas;
+        Text vidas, vidas2;
 
         Vector2f direction;
 
@@ -39,6 +42,7 @@ class Fase1
         std::vector<Plataforma>invChao;
         std::vector<Obstaculo*>obs;
         std::vector<Projetil>bala;
+        std::vector<Projetil2>bala2Jog;
         std::vector<ProjInimigo>bala2;
         std::vector<Inimigo*>inimigos;
         //Plataforma invChao(nullptr,Vector2f(400.f,1000.f),Vector2f(-200.f,-50.f)));
