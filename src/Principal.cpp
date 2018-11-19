@@ -159,6 +159,8 @@ void Principal::Executar()
                             _game =true;
                             desenhaMenu=false;
                             desenhaMenu2=false;
+                            _primeiroLoop=true;
+                            _primeiroLoop2=true;
                             menu1.Altera2(window.getSize().x, window.getSize().y);
                             break;
                         case 1:
@@ -166,6 +168,8 @@ void Principal::Executar()
                             _game =true;
                             desenhaMenu=false;
                             desenhaMenu2=false;
+                            _primeiroLoop=true;
+                            _primeiroLoop2=true;
                             menu1.Altera2(window.getSize().x, window.getSize().y);
                             break;
                         case 2:
@@ -243,12 +247,16 @@ void Principal::Executar()
 
         }
 
-        if(_game)
+        if(_game )
         {
+            if (_primeiroLoop )
+            {
+                start = std::clock();
+                _primeiroLoop = false;
+            }
 
-            start = std::clock();
 
-            if (_fimFase1)
+            if (_fimFase1 )
             {
                 fase1Pronta=false;
             }
@@ -326,9 +334,17 @@ void Principal::Executar()
             }
         }
 
-        if(_fimFase2)
+        if(_fimFase2 )
         {
-            duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+            if(_primeiroLoop2)
+            {
+                fim = clock();
+                tempoTotal=fim-start;
+                duration = tempoTotal / (double) CLOCKS_PER_SEC;
+                std::cout<<duration;
+                _primeiroLoop2=false;
+            }
+
             _game=false;
             desenhaMenu=true;
         }

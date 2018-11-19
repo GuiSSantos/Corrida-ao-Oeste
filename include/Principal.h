@@ -34,11 +34,11 @@ class Principal
     protected:
 
     private:
-    bool jogoPronto2 = false, desenhaMenu = true, desenhaMenu2 = false,fase1Pronta = false;
+    bool jogoPronto2 = false, desenhaMenu = true, desenhaMenu2 = false,fase1Pronta = false, _primeiroLoop = false, _primeiroLoop2 = false;
     bool _pause=false,_save=false, _fase1=false,_jog2 =false,_game=false, _fimFase1=false, _fimFase2=false;
     string fase1t,jog2,posx,posy;
     float _posx,_posy;
-    std::clock_t start;
+    std::clock_t start,fim,tempoTotal;
     double duration;
 
 
