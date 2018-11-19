@@ -1,5 +1,6 @@
 #ifndef PROJINIMIGO_H
 #define PROJINIMIGO_H
+#include "Inimigo.h"
 #include "Collider.h"
 class ProjInimigo
 {
@@ -9,6 +10,7 @@ class ProjInimigo
         void Atualiza();
         void Desenha(RenderWindow&window);
         Collider GetCollider();
+        Vector2f GetPosition();
     protected:
 
     private:

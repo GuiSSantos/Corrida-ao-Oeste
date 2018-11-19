@@ -1,23 +1,25 @@
-#pragma once
-#include "SFML/Graphics.hpp"
-
+#ifndef PAUSA_H
+#define PAUSA_H
 #define ITENS_MENU 3
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
 
 class Pausa
 {
-public:
-	Pausa(float width, float height);
-	~Pausa();
-
-	void draw(sf::RenderWindow &window);
-	void MoveUp();
-	void MoveDown();
-	int GetPressedItem() { return selectedItemIndex; }
-	void setPosition(float dx, float dy);
+    public:
+        Pausa(float width, float height);
+        virtual ~Pausa();
+        void Desenha(RenderWindow &window);
+        void MoveUp();
+        void MoveDown();
+        int GetPressedItem() { return selectedItemIndex; }
+        void setPosition(float dx,float dy);
 
 private:
 	int selectedItemIndex;
-	sf::Font font;
-	sf::Text menu[ITENS_MENU];
-
+	Font font;
+	Text menu[ITENS_MENU];
 };
+
+#endif // PAUSA_H

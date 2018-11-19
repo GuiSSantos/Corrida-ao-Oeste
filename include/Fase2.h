@@ -1,5 +1,5 @@
-#ifndef FASE1_H
-#define FASE1_H
+#ifndef FASE2_H
+#define FASE2_H
 #include<SFML/Graphics.hpp>
 #include<SFML/Audio.hpp>
 #include"Animacao.h"
@@ -19,24 +19,22 @@
 #include "Jogador2.h"
 #include "Projetil2.h"
 #include <cmath>
+#include "BTK.h"
 
-using namespace sf;
-
-
-class Fase1
+class Fase2
 {
-    public:
-        Fase1();
-        virtual ~Fase1();
-        void Executar(RenderWindow& window,float deltaTime,Jogador& jogador1,View& view, bool& _fimFase1);
-        void Executar2(RenderWindow& window,float deltaTime,Jogador& jogador1,View& view, Jogador2& jogador2, bool& _fimFase1);
+     public:
+        Fase2();
+        virtual ~Fase2();
+        void Executar(RenderWindow& window,float deltaTime,Jogador& jogador1,View& view, bool& _fimFase2);
+        void Executar2(RenderWindow& window,float deltaTime,Jogador& jogador1,View& view, Jogador2& jogador2, bool& _fimFase2);
         void Atualiza(float deltaTime);
         void Atualiza2(float deltaTime);
 
     protected:
 
     private:
-        Texture background,chao21,textureApache,bar,jj,chao,bola,cacto,tnt,bala1,bala22;
+        Texture billy,textureApache,chao21, background,bar,jj,chao,bola,cacto,tnt,bala1,bala22;
         Font fonte;
         Text vidas;
         Font fonte2;
@@ -54,8 +52,9 @@ class Fase1
         std::vector<Projetil2>bala2Jog;
         std::vector<ProjInimigo>bala2;
         std::vector<Inimigo*>inimigos;
+        std::vector<Inimigo*>chefe;
         std::vector<Vector2f>balaPos;
         std::vector<Vector2f>balaPos2;
 };
 
-#endif // FASE1_H
+#endif // FASE2_H

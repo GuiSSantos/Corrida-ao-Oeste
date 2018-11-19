@@ -24,18 +24,14 @@ BolaFeno::~BolaFeno()
 }
 
 void BolaFeno::Atualiza(float deltaTime){
-    Vector2f vel;
 
     counter++;
-    float velocidade = 90.f;
     if(counter<2000){
         corpo.move(0.06f,0.f);
-        //vel.x+=velocidade;
     }
     if(counter>2000){
         corpo.move(-.06f,0.f);
     }
-
     if(counter >4000)
         counter=0;
 }

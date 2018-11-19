@@ -3,7 +3,6 @@
 #include<SFML/Graphics.hpp>
 #include "jogador.h"
 #include"Collider.h"
-#include "Jogador2.h"
 
 
 class Projetil
@@ -14,6 +13,7 @@ class Projetil
         void Atualiza();
         void Desenha(RenderWindow&window);
         Collider GetCollider();
+        Vector2f GetPosition();
     protected:
 
     private:

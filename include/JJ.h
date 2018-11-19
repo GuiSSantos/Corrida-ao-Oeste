@@ -7,9 +7,9 @@
 class JJ:public Inimigo
 {
     public:
+
         JJ(Texture* texture,Vector2f posicao, float trocaTempo);
         ~JJ();
-
         void Atualiza(float deltaTime);
         void Desenha(RenderWindow& window);
         Vector2f GetPosition();
@@ -17,6 +17,10 @@ class JJ:public Inimigo
         //void OnColisao(Vector2f direction);
         void setPosition(float dx, float dy);
         bool GetAtira();
+        int getVida();
+        void setVida(int x);
+        int getId();
+
     protected:
 
     private:
@@ -26,7 +30,9 @@ class JJ:public Inimigo
         float velocidade;
         Vector2f vel;
         bool canJump;
-        int counter;
+        int counter=0;
         bool jjAtira;
+        int vida;
+        int id;
 };
 #endif // APACHE_H
